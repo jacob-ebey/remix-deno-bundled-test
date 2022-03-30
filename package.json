@@ -5,7 +5,10 @@
   "license": "",
   "sideEffects": false,
   "scripts": {
-    "build": "remix build",
+    "dev:remix": "remix watch",
+    "dev:deno": "deno run --watch --allow-net --allow-read ./build/index.js",
+    "dev": "remix build && run-p dev:*",
+    "build": "rm -rf ./build ./public/build && remix build",
     "postinstall": "remix setup cloudflare-workers",
     "start": "deno run --allow-net --allow-read ./build/index.js"
   },

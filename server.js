@@ -29,4 +29,5 @@ async function handler(request) {
   }
 }
 
+console.log("Starting server on http://localhost:8000");
 serve(handler);
